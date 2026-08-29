@@ -1,0 +1,29 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Local config (may contain API keys)
+config.json
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# 本机下载的大模型、缓存与 llama.cpp/CUDA 运行文件
+models/
+runtime/
+
+# 本机可恢复备份与临时运行状态
+backups/

@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+body { width: 290px; margin: 0; padding: 16px; color: #f2f5fa; background: #111722; font: 14px/1.4 "Microsoft YaHei UI", "Segoe UI", sans-serif; }
+header { display: flex; justify-content: space-between; margin-bottom: 16px; font-size: 16px; }
+label { display: block; margin: 12px 0 5px; color: #c7d0dc; }
+select, input[type="range"], button { width: 100%; }
+select { padding: 8px; color: #f2f5fa; background: #1a2432; border: 1px solid #334154; border-radius: 6px; }
+.toggle-row { display: flex; align-items: center; justify-content: space-between; }
+.toggle-row input { width: 18px; height: 18px; }
+button { margin-top: 16px; padding: 9px; border: 0; border-radius: 7px; color: white; background: #3478f6; cursor: pointer; font-weight: 600; }
+.dot { width: 11px; height: 11px; margin-top: 5px; border-radius: 50%; }
+.connected { background: #41c96b; box-shadow: 0 0 8px #41c96b; }
+.disconnected { background: #ef596f; }
+#status-text { margin: 10px 0 0; color: #8896a8; font-size: 12px; text-align: center; }

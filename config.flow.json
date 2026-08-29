@@ -1,0 +1,59 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8765
+  },
+  "audio": {
+    "chunk_duration_seconds": 3.0,
+    "sample_rate": 16000,
+    "capture_device": "",
+    "original_volume": 1.0,
+    "overlap_seconds": 1.0
+  },
+  "stt": {
+    "engine": "whisper_local",
+    "whisper_api": {
+      "api_key": "",
+      "model": "whisper-1"
+    },
+    "whisper_local": {
+      "model_size": "small",
+      "compute_type": "int8_float16",
+      "beam_size": 3
+    }
+  },
+  "translation": {
+    "enabled": true,
+    "engine": "llama_cpp",
+    "source_language": "Japanese",
+    "target_language": "简体中文",
+    "claude": {
+      "api_key": "",
+      "model": "claude-sonnet-4-6"
+    },
+    "openai": {
+      "api_key": "",
+      "model": "gpt-4o"
+    },
+    "ollama": {
+      "host": "http://localhost:11434",
+      "model": "llama3"
+    },
+    "llama_cpp": {
+      "host": "http://127.0.0.1:8766",
+      "model": "Hy-MT2-1.8B",
+      "api_key": "live-subtitle-local-6f87d3a2"
+    },
+    "cursor": {
+      "model": "claude-3-5-sonnet",
+      "token": ""
+    }
+  },
+  "tts": {
+    "enabled": false,
+    "voice_gender": "female",
+    "rate": 1.0,
+    "playback_device": "",
+    "tts_volume": 1.0
+  }
+}
