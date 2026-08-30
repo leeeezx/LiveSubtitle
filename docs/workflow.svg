@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+  <title id="title">本地实时字幕工作流程</title>
+  <desc id="desc">Windows 播放声音，经过 Whisper 语音识别和 Hy-MT2 本机翻译，最终在 Chrome 页面上显示字幕。</desc>
+  <rect width="1200" height="280" rx="24" fill="#f6f8fa"/>
+  <text x="600" y="48" text-anchor="middle" font-family="Microsoft YaHei UI, Segoe UI, sans-serif" font-size="24" font-weight="700" fill="#1f2328">声音在本机处理，字幕直接显示在浏览器中</text>
+  <g font-family="Microsoft YaHei UI, Segoe UI, sans-serif">
+    <g transform="translate(40 82)">
+      <rect width="240" height="144" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+      <circle cx="120" cy="43" r="24" fill="#ddf4ff"/>
+      <path d="M109 43h8l11-10v20l-11-10h-8z" fill="#0969da"/>
+      <path d="M133 37q10 6 0 12M139 31q18 12 0 24" fill="none" stroke="#0969da" stroke-width="3" stroke-linecap="round"/>
+      <text x="120" y="92" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2328">Windows 播放声音</text>
+      <text x="120" y="119" text-anchor="middle" font-size="15" fill="#57606a">视频、网课或直播回放</text>
+    </g>
+    <path d="M296 154h48" stroke="#8c959f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M337 146l10 8-10 8" fill="none" stroke="#8c959f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(360 82)">
+      <rect width="200" height="144" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+      <circle cx="100" cy="43" r="24" fill="#dafbe1"/>
+      <path d="M92 31v18a8 8 0 0016 0V31M86 47a14 14 0 0028 0M100 61v8M93 69h14" fill="none" stroke="#1a7f37" stroke-width="3" stroke-linecap="round"/>
+      <text x="100" y="92" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2328">Whisper 识别</text>
+      <text x="100" y="119" text-anchor="middle" font-size="15" fill="#57606a">把语音变成原文</text>
+    </g>
+    <path d="M576 154h48" stroke="#8c959f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M617 146l10 8-10 8" fill="none" stroke="#8c959f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(640 82)">
+      <rect width="200" height="144" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+      <circle cx="100" cy="43" r="24" fill="#fff8c5"/>
+      <text x="100" y="51" text-anchor="middle" font-size="25" font-weight="700" fill="#9a6700">译</text>
+      <text x="100" y="92" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2328">Hy-MT2 翻译</text>
+      <text x="100" y="119" text-anchor="middle" font-size="15" fill="#57606a">在本机生成译文</text>
+    </g>
+    <path d="M856 154h48" stroke="#8c959f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M897 146l10 8-10 8" fill="none" stroke="#8c959f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(920 82)">
+      <rect width="240" height="144" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+      <circle cx="120" cy="43" r="24" fill="#fbefff"/>
+      <rect x="106" y="32" width="28" height="21" rx="3" fill="none" stroke="#8250df" stroke-width="3"/>
+      <path d="M111 58h18" stroke="#8250df" stroke-width="3" stroke-linecap="round"/>
+      <text x="120" y="92" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2328">Chrome 显示字幕</text>
+      <text x="120" y="119" text-anchor="middle" font-size="15" fill="#57606a">原文与译文叠加在页面上</text>
+    </g>
+  </g>
+</svg>
