@@ -37,6 +37,27 @@ Python 依赖记录在项目根目录的 `requirements.txt` 中。启动脚本�
 
 如果计划任务不存在，脚本会提示“缺少 Windows 后台任务”。当前仓库还没有包含创建该任务的安装脚本，因此从源码重新部署时需要自行完成这一项。
 
+创建任务时不要添加任何触发器（尤其是登录触发器）。任务由 `launch.ps1` 通过 `Start-ScheduledTask` 手动启动，不需要触发器；一旦配置了登录触发器，每次开机都会自动拉起服务，并且由于 Windows Terminal 托管控制台，`-WindowStyle Hidden` 不会生效，桌面上会留下一个空的终端窗口。
+
+创建示例（在当前用户下执行，任务无触发器，仅手动启动）：
+
+```powershell
+$action = New-ScheduledTaskAction -Execute "C:\Program Files\PowerShell\7\pwsh.exe" -Argument '-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "E:\Tools\LiveSubtitle\service-host.ps1" -Mode flow'
+Register-ScheduledTask -TaskName "LiveSubtitle-Flow" -Action $action
+```
+
+若任务已带登录触发器，可将其移除：
+
+```powershell
+$svc = New-Object -ComObject Schedule.Service
+$svc.Connect($env:COMPUTERNAME)
+$folder = $svc.GetFolder("\")
+$def = $folder.GetTask("LiveSubtitle-Flow").Definition
+$def.Triggers.Clear()
+# 6 = TASK_CREATE_OR_UPDATE，3 = TASK_LOGON_INTERACTIVE_TOKEN
+$folder.RegisterTaskDefinition("LiveSubtitle-Flow", $def, 6, $null, $null, 3)
+```
+
 ## 配置文件
 
 - `config.flow.json`：流畅模式，默认使用较轻的识别参数和 Q4 翻译模型。
